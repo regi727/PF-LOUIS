@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/form.css">
+    <title></title>
 </head>
+
 <body>
-    
-    <script src="./index.js"></script>
+    <form form action="https://formsubmit.co/84cd86edd62ad1b0da35251f17b0cc1d" method="POST" id="contact-form">
+        <div class="contact">
+            <h1>Formulario de contacto</h1>
+            <div class="form-contact">
+                <label for="text">Nombre:</label>
+                <input type="text" placeholder="Tu nombre..." name="inputName"required ><br>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Tu email..."name="inputEmail"required >
+            </div>
+            <textarea name="text" name="text-mesage" cols="35" rows="10" placeholder="Déjanos tu mensaje aquí..."required></textarea>
+
+            <div class="btn">
+                <button type="submit"id="enviar">Enviar</button>
+                <div>
+                </div>
+            </div>
+            <input type="hidden" name="_next" value="http://localhost:5501">
+            <input type="hidden" name="_captcha" value="false">
+    </form>
+    <span id="mensaje"></span>
+    <script src="registrar.js"></script>
 </body>
+
 </html>

@@ -214,7 +214,8 @@ h2:hover {
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: .3s;
 }
-.contenedorCesta.active{
+
+.contenedorCesta.active {
     right: 0;
 
 }
@@ -242,7 +243,8 @@ h2:hover {
     color: #00a896;
     cursor: pointer;
 }
-.fa-trash:hover{
+
+.fa-trash:hover {
     color: black;
 }
 
@@ -735,10 +737,11 @@ label {
     border: 1px solid red;
     box-shadow: 0 0 8px red;
 }
-#infoUsuario{
-    display: ;
 
+#infoUsuario {
+    display: none;
 }
+
 /***Fin CSS login ,Registra ***/
 
 /**Footer**/
@@ -796,7 +799,6 @@ footer {
     height: 40px;
     background-color: rgb(189, 186, 186);
 }
-
 
 
 

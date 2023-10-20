@@ -1,0 +1,49 @@
+
+/** Formulario de contacto*/
+h1 {
+    display: flex;
+    justify-content: center;
+    color: blue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    width: 350px;
+    height: 380px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 8);
+    color: grey
+}
+
+.btn button {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.contact {
+    margin: auto;
+}
+
+textarea {
+    outline: none;
+}
+/**Fin Formulario de contacto*/
+
+

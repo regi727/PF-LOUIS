@@ -91,53 +91,25 @@ function  agregarAlcesta(titulo,precio,imgProd) {
 function actualizarTotal() {
     let total = 0;
     const precioTotal = document.querySelector('.precioTotal');
-    
-    const cestaDetalle = document.querySelectorAll('.cestaDetalle')
    
-    cestaDetalle.forEach((cestaDetalles) => {
-       const cestaDetallesprecio = cestaDetalles.querySelector('.productoPrecio');
-       const carritoPrecio = Number(cestaDetallesprecio.textContent.replace('CLP',''));
-       console.log(cestaDetallesprecio );
+    const cestaDetalle = document.querySelectorAll('.cestaDetalle')
     
-       
-       
+
+    cestaDetalle.forEach((cestaDetalles) => {
+      const cestaDetallesprecio = cestaDetalles.querySelector('.productoPrecio');
+      const carritoCantidad = cestaDetalles.querySelector('.cantidadProducto')
+      
+      const carritoPrecio = Number(cestaDetallesprecio.textContent.replace('CLP',''));
+      const cantidadItem = Number(carritoCantidad.value); 
+     
+      console.log(total)
+      total = total + carritoPrecio * cantidadItem;
+      console.log(total)
     })
+    precioTotal.innerHTML =`${total}CLP`
 }
 
 
-// codigo Registrar ***********************************
-
-document.getElementById("userForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    let nombre = document.getElementById("nombre").value;
-    let correo = document.getElementById("email").value;
-    let contrasena = document.getElementById("password").value;
-    let telefono = document.getElementById("telefono").value;
-
-    let usuario = {
-        nombre: nombre,
-        correo: correo,
-        contrasena: contrasena,
-        telefono: telefono
-    };
-
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    usuarios.push(usuario);
-
-    // Guardar en LocalStorage
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    document.getElementById("userForm").reset();
-    Swal.fire({
-        icon: 'success',
-        title: 'Registro correcto',
-        text: 'Gracias por registrarte' 
-    });
-});
-
-//Fin codigo Reginstrar ***********************************
 
 
 
