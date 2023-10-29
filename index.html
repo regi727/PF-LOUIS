@@ -13,10 +13,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/styles.css">
 
-
     <title>RECC</title>
-    <link rel="stylesheet" href="owl.carousel.min.css">
-    <link rel="stylesheet" href="owl.theme.default.min.css">
 </head>
 
 <body>
@@ -24,61 +21,82 @@
         <div class="contenedor">
 
             <div class="barra-contacto">
-                <div class="nav-contacto">
-                    <a href="acerca.html">Acerca de</a>
-                    <a href="contacto.html">Contacto</a>
-                    <a href="+569 74723711">Atención al Cliente</a>
-                </div>
-
-
                 <div class="usuario">
-
                     <a href="login.html"><i class="fa-regular fa-user"></i></a>
                     <a href="login.html" class="user">Entrar</a>
                 </div>
-                <div id="infoUsuario">
-                    <p>Bienvenido, <span id="userEmail"></span>! <button id="cerrarSesion">Cerrar Sesión</button></p>
-                </div>
-            </div>
-
-
-            <div class="logo">
-                <a href="index.html">
-                    <h1>RECC</h1>
-                </a>
-                <div class="seach">
-                    <input type="search" class="seach-input" placeholder="Buscar productos...">
-                    <button name="submit">Buscar</button>
-                </div>
-
                 <div class="usuario-seach">
                     <i class="fa-solid fa-basket-shopping" id="icono-cesta"></i>
                 </div>
 
-                <!--Info carrito-->
-                <div class="contenedorCesta">
-                    <h3 class="titulo-cesta">Tu Carrito de compra</h3>
-                    <div class="cestaDetalle ">
-                        <div class="caja-cesta">
-                            <img src="./cocina/foto10.jpg" class="cart-img" alt="">
-                            <div class="detalle-box">
-                                <div class="productoTitulo">Lapto lenovo</div>
-                                <div class="productoPrecio">CLP 100</div>
-                                <input type="number" value="1" min="1" class="cantidadProducto">
-                            </div>
-                            <i class="fa-solid fa-trash" id="borrarProd"></i>
-                            <!--Total-->
-                            <div class="total">
-                                <div class="tituloTotal">Total :</div>
-                                <div class="precioTotal"> 0</div>
-                            </div>
-                            <button class="btn-comprar" name="submit">Comprar ahora</button>
-                            <i class="fa-solid fa-x" id="cerrarCarrito"></i>
-                        </div>
+            </div>
 
+
+            <nav class="navbar navbar-expand-lg  custom-bg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">RECC</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="acerca.html">Acerca de</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://api.whatsapp.com/send?phone=56974723711">Atención al
+                                    cliente</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
+            </nav>
+
+
+            <!--Info carrito-->
+            <div class="contenedorCesta">
+                <h3 class="titulo-cesta">Tu Carrito de compra</h3>
+
+                <div class="add-product">
+                    <!-- <div class="cestaDetalle ">
+                        <div class="caja-cesta">
+                            <img src="./cocina/foto10.jpg" class="cart-img" alt="">
+                            <div class="detalle-box" id="detalle-box">
+                                <p class="productoTitulo">Lapto lenovo</p>
+                                <b class="productoPrecio">CLP 15000</b>
+                                <h6 class="cantidadProd">Cantidad: 1</h6>
+                            </div>
+                             
+                            <i class="fa-solid fa-trash" id="borrarProd"></i>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!--Total-->
+                <div class="total">
+                    <div class="tituloTotal">Total :</div>
+                    <div class="precioTotal">0</div>
+                </div>
+                <a href="comprar.html"><button class="btn-comprar" name="submit">Comprar ahora</button></a>
+                <i class="fa-solid fa-x" id="cerrarCarrito"></i>
             </div>
+
+
+
+
+
+
+
+
 
             <div class="nav-bar">
                 <div class="nav">
@@ -90,8 +108,8 @@
                 </div>
             </div>
         </div>
-
     </header>
+
 
     <div class="banner">
         <div class="text">
@@ -122,136 +140,113 @@
 
 
     <section>
-        <div class="contenedor">
-            <div class="contenedor-productos">
-                <div class="productos">
-                    <img src="./cocina/foto6.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
 
-                </div>
+        <div class="contenedor-productos">
 
-                <div class="productos">
-                    <img src="./cocina/foto7.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
+            <div class="productos">
+                <img src="./cocina/foto6.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">85</b>
 
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
+                <button name="submit" class="add-carrito" btn-id="btn-1">Agregar</button>
+            </div>
 
-                <div class="productos">
-                    <img src="./cocina/foto14.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
+            <div class="productos">
+                <img src="./cocina/foto7.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">75</b>
 
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto12.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
+                <button name="submit" class="add-carrito" btn-id="btn-2">Agregar</button>
+            </div>
 
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto9.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
+            <div class="productos">
+                <img src="./cocina/foto14.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">120</b>
 
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto8.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto3.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="/cocina/foto5.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                
-
-                <div class="productos">
-                    <img src="./cocina/foto11.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto2.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./cocina/foto3.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
-                <div class="productos">
-                    <img src="./Laptop/foto4.jpg" alt="" class="img-prod">
-                    <p class="titulo-prod">Notebook nuevo</p>
-                    <b class="precio-p">Precio: CLP 150.000</b>
-                    <div class="btn-carousel">
-                        <button name="submit" class="add-carrito">Agregar</button>
-                    </div>
-                </div>
+                <button name="submit" class="add-carrito" btn-id="btn-3">Agregar</button>
 
             </div>
-          
+            <div class="productos">
+                <img src="./cocina/foto12.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">150</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-4">Agregar</button>
+            </div>
+            <div class="productos">
+                <img src="./cocina/foto9.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">18</b>
+
+
+                <button name="submit" class="add-carrito" btn-id="btn-5">Agregar</button>
+            </div>
+            <div class="productos">
+                <img src="./cocina/foto8.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">15</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-6">Agregar</button>
+            </div>
+
+            <div class="productos">
+                <img src="./cocina/foto3.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">120</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-7">Agregar</button>
+            </div>
+
+            <div class="productos">
+                <img src="/cocina/foto5.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">35</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-8">Agregar</button>
+            </div>
+
+
+            <div class="productos">
+                <img src="./cocina/foto11.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">56</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-9">Agregar</button>
+            </div>
+            <div class="productos">
+                <img src="./cocina/foto2.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">80</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-10">Agregar</button>
+            </div>
+            <div class="productos">
+                <img src="./cocina/foto3.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">70</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-11">Agregar</button>
+            </div>
+            <div class="productos">
+                <img src="./Laptop/foto4.jpg" alt="" class="img-prod">
+                <p class="titulo-prod">Notebook nuevo</p>
+                <b class="precio-p">50</b>
+
+                <button name="submit" class="add-carrito" btn-id="btn-12">Agregar</button>
+            </div>
         </div>
 
-        <div class="btn-ofertas">
-            <button name="button">Comprar mejores ofertas</button>
-        </div>
+
+
+       
 
         <div class="ofertas">
             <div class="imagen-ofertas-pub">
-
-                <a href=""><button name="submit">Comprar</button></a>
+                <a href="comprar.html"><button name="submit">Comprar</button></a>
             </div>
             <div class="imagen-ofertas">
-
-                <a href=""><button name="submit">Comprar</button></a>
+                <a href="comprar.html"><button name="submit">Comprar</button></a>
             </div>
         </div>
     </section>
@@ -260,16 +255,19 @@
     <div class="ofertas">
 
         <div class="imagen-subscribe">
-            <div class="info-subscribe">
-                <p>Suscribete y ahorra</p>
-                <h4>-50%</h4>
-                <p>en tu primera compra</p>
-                <input type="text" id="text" placeholder="Tu email.">
-                <button name="submit" class="add-carrito">Subscribe</button>
-            </div>
-
+            <form id="subscribe-form">
+                <div class="info-subscribe">
+                    <p>Suscribete y ahorra</p>
+                    <h4>-50%</h4>
+                    <p>en tu primera compra</p>
+                    <input type="text" id="email-subscribe" name="email-subscribe" placeholder="Tu email.">
+                    <div class="btn-subscribe">
+                        <button name="submit" id="button-subscribe">Subscribe</button>
+                    </div>
+                    <span id="mensaje"></span>
+                </div>
+            </form>
         </div>
-
     </div>
 
     <footer>
@@ -298,13 +296,16 @@
                     <img src="./iconos/visa.png" alt="">
                 </div>
             </div>
-
         </div>
     </footer>
+
     <div class="autor">
         <small class="derechos"> &copy; 2023<b>Creado por Reginald LOUIS </b>- Todos los Derechos Reservados.</small>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

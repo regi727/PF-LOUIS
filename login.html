@@ -26,6 +26,8 @@
             <a href="registrar.html">Regístrate.</a>
         </form>
         <span id="mensaje"></span>
+        <p id="mostrarNombre" style="display: none;"></p>
+       
     </div>
 
 
@@ -38,10 +40,19 @@
 
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
+           // let mostrarNombre = document.getElementById("mostrarNombre").value;
 
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
             let usuario = usuarios.find(user => user.correo === email);
+
+           /*  if (usuario) {
+                email.textContent = "Hola," + email;
+                mostrarNombre.style.display = 'block';
+            } else {
+                mostrarNombre.style.display = "none";
+            } */
+           
 
             if (usuario && usuario.contrasena === password) {
                 Swal.fire({
@@ -55,7 +66,6 @@
                 document.getElementById("mensaje").textContent = "Correo o contraseña incorrectos.";
 
             }
-
         });
         //Fin codigo iniciar Sesion ***********************************
     </script>

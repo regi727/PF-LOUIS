@@ -19,76 +19,49 @@ document.getElementById("userForm").addEventListener("submit", function (e) {
     };
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    if (repitPass === contrasena) {
-        // Guardar en LocalStorage
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    if (nombre != "" || correo != "" || contrasena != "" || repitPass != "" || telefono != "") {
 
-        document.getElementById("userForm").reset();
-       
-        Swal.fire({
-            icon: 'success',
-            title: 'Registro correcto',
-            text: 'Gracias por registrarte'
-        });
-        document.getElementById("mensaje").style.display = 'none';
+        if (repitPass === contrasena) {
+            // Guardar en LocalStorage
 
+            usuarios.push(usuario);
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            console.log(usuario)
+            document.getElementById("userForm").reset();
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Registro correcto',
+                text: 'Gracias por registrarte'
+            });
+            document.getElementById("mensaje").style.display = 'none';
+
+        } else {
+            document.getElementById("mensaje").textContent = "las contraseñas no coinciden.";
+        }
     } else {
-        document.getElementById("mensaje").textContent = "las contraseñas no coinciden.";
+        document.getElementById("mensaje").textContent = "Por favor rellene todo los campos.";
     }
-    ValidarCorreo(correo);
-    usuarios.push(usuario);
-    
+
+
 });
 
-/* 
-//Validar correo
 
-function ValidarCorreo(correo1) {
-    let validarEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    let correop = validarEmail.test(correo1);
-    
-    if (correop === true) {
-        document.getElementById("mensaje").style.display = 'none';
-       
-    } else {
-        document.getElementById("mensaje").textContent = "Ingrese un email valido";
-    }
-}
- */
+//Codigo formulario de subscribirse ***********************************
 
-//Fin codigo Reginstrar ***********************************
-
-
-// codigo formulario de contacto  ***********************************
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+document.getElementById("subscribe-form").addEventListener("submit", function (e) {
     e.preventDefault();
-    let name = document.getElementById("inputName").value;
-    let email = document.getElementById("inputEmail").value;
-    let mensaje = document.getElementById("text-mesage").value;
-
-    let mensajes = {
-        nombre: nombre,
-        email: email,
-        mensaje: mensaje,
-        
-    };
-    let mensajesEnv = JSON.parse(localStorage.getItem("mensajesEnv ")) || [];
-   
-    
-    if (name != "" || email != "" || mensaje != "") {
-       
+    let correo = document.getElementById("email-subscribe").value;
+    console.log(correo)
+    if(correo === "" ) {
+        document.getElementById("mensaje").textContent = "Por favor debes ingresar un email.";
+    }else{
         Swal.fire({
             icon: 'success',
-            title: 'Mensaje enviado con exito',
-            text: 'Gracias por contactarnos'
+            title: 'Suscripción correcta',
+            text: 'Gracias por subscribirse'
         });
-       
-    }else{
-        localStorage.setItem("mensajesEnv ", JSON.stringify(mensajesEnv ));
-        document.getElementById("mensaje").textContent = "Por favor, rellene todos los campos.";
     }
-    mensajesEnv.push(mensajes);
-
 })
 
-//Fin codigo formulario de contacto ***********************************
+//Fin codigo formulario de subscribirse  ***********************************

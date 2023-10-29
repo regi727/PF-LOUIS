@@ -11,7 +11,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     background-color: white;
+}
 
+.custom-bg {
+    background-color: #70a9a1;
+
+}
+
+.container-fluid a {
+    color: white;
+    font-size: 16px;
 }
 
 a {
@@ -32,7 +41,8 @@ a {
     width: 100%;
     background: #00a896;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-contacto a {
@@ -73,55 +83,18 @@ i {
 /**FIN Barra principal del contacto**/
 
 /**Barra del logo**/
-h1 {
-    font-family: 'Alfa-slab';
-    color: white;
-}
+
 
 h2:hover {
     color: #90e0ef;
 }
 
-.logo {
-    background: #2ddfb8;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
 .usuario-seach i {
     font-size: 18px;
     margin-left: 20px;
+    margin-right: 30px;
 }
 
-.seach button {
-    /** A modificar barra logo**/
-    background: #00a896;
-    width: 80px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-    margin: 5px 5px;
-    justify-items: center;
-}
-
-.seach-input {
-    width: 300px;
-    font-size: 12px;
-
-    padding: 8px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.seach-input:focus {
-    border-color: transparent;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
 
 #cuantaCarrito {
     background-color: black;
@@ -153,7 +126,7 @@ h2:hover {
 
 /**Barra de menu**/
 .text {
-    background: url(/cocina/foto3.jpg);
+    background: url(/Imagenes/computer.jpg);
     width: 100%;
     height: 75vh;
     background-repeat: no-repeat;
@@ -182,7 +155,7 @@ h2:hover {
 }
 
 #selected {
-    color: #9a8c98;
+    color: #600352;
 }
 
 .container-info {
@@ -205,10 +178,11 @@ h2:hover {
 
 .contenedorCesta {
     position: fixed;
-    top: 0;
+    top: 50px;
     right: -100%;
+    z-index: 1;
     width: 350px;
-    min-height: 80vh;
+   
     padding: 20px;
     background: white;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
@@ -242,6 +216,7 @@ h2:hover {
     font-size: 18px;
     color: #00a896;
     cursor: pointer;
+    margin-right: 25px;
 }
 
 .fa-trash:hover {
@@ -260,6 +235,7 @@ h2:hover {
     justify-content: flex-end;
     margin-top: 1.5rem;
     border-top: 1px solid;
+    margin-bottom: 100px;
 }
 
 .tituloTotal {
@@ -272,7 +248,6 @@ h2:hover {
 }
 
 .btn-comprar {
-    display: flex;
     margin: 1.5rem auto 0 auto;
     padding: 10px 10px;
     border: none;
@@ -413,7 +388,7 @@ b {
 }
 
 .imagen-subscribe {
-    background-image: url(/cocina/foto10.jpg);
+    background-image: url(/Imagenes/Banner.png);
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
@@ -439,13 +414,13 @@ b {
     color: black;
 }
 
+
 .info-subscribe {
     margin: 40px;
     margin-left: 30%;
 }
 
-.info-subscribe p,
-h4 {
+.info-subscribe h4 {
     padding: 0;
     color: white;
 }
@@ -456,15 +431,15 @@ h4 {
 
 .info-subscribe input {
     padding: .3rem;
-    width: 35%;
+    width: 50%;
     outline: none;
     border: none;
     border-radius: 25px;
 }
 
-.info-subscribe button {
+.btn-subscribe button {
     padding: .3rem;
-    width: 20%;
+    width: 40%;
     outline: none;
     border: none;
     border-radius: 25px;
@@ -473,7 +448,7 @@ h4 {
     text-align: center;
 }
 
-.info-subscribe button:hover {
+.btn-subscribe button:hover {
     background-color: white;
     color: black;
 }
@@ -550,10 +525,11 @@ label {
 }
 
 .item p {
+
     margin-top: 10px;
 }
 
-.btn-carousel button {
+.add-carrito button {
     background-color: #2ddfb8;
     border: none;
     color: white;
@@ -563,14 +539,14 @@ label {
     margin-top: 5px;
 }
 
-.btn-carousel button:hover {
+.add-carrito button:hover {
     color: black;
     background-color: white;
     border: 1px solid;
     border-color: #00a896;
 }
 
-.btn-carousel {
+.add-carrito {
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
@@ -736,10 +712,6 @@ label {
 .invalid {
     border: 1px solid red;
     box-shadow: 0 0 8px red;
-}
-
-#infoUsuario {
-    display: none;
 }
 
 /***Fin CSS login ,Registra ***/
