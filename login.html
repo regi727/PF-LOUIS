@@ -14,6 +14,10 @@
         <h3 class="titulo-registro">Iniciar Sesión</h3>
         <form id="userLogin">
             <div class="registro">
+                <label for="nombreUsuario">Nombre</label>
+                <input type="text" id="nombreUsuario" required>
+            </div>
+            <div class="registro">
                 <label for="email">Email</label>
                 <input type="text" id="email" required>
             </div>
@@ -37,23 +41,23 @@
         // Codigo Iniciar Sesión **********************************
         document.getElementById("userLogin").addEventListener("submit", function (e) {
             e.preventDefault();
+            login();
+        });
 
+
+        function login() {
+            
+            let nombreUsuario = document.getElementById("nombreUsuario").value;
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
+            let mostrarNombre = document.getElementById("mostrarNombre").value;
            // let mostrarNombre = document.getElementById("mostrarNombre").value;
 
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
             let usuario = usuarios.find(user => user.correo === email);
 
-           /*  if (usuario) {
-                email.textContent = "Hola," + email;
-                mostrarNombre.style.display = 'block';
-            } else {
-                mostrarNombre.style.display = "none";
-            } */
-           
-
+          
             if (usuario && usuario.contrasena === password) {
                 Swal.fire({
                     icon: 'success',
@@ -65,10 +69,10 @@
             } else {
                 document.getElementById("mensaje").textContent = "Correo o contraseña incorrectos.";
 
-            }
-        });
+            } 
+        }
         //Fin codigo iniciar Sesion ***********************************
     </script>
-</body>
 
+</body>
 </html>

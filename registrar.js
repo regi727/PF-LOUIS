@@ -42,8 +42,6 @@ document.getElementById("userForm").addEventListener("submit", function (e) {
     } else {
         document.getElementById("mensaje").textContent = "Por favor rellene todo los campos.";
     }
-
-
 });
 
 

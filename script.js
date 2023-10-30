@@ -4,6 +4,7 @@ const contenedorCesta = document.querySelector('.add-product');
 const cestaDetalle = document.querySelector('.cestaDetalle');
 let botonEliminar = document.querySelector('.borrarProd');
 let total = document.querySelector('.precioTotal');
+let aumentarCarrito = document.querySelector('.contador-producto');
 
 
 
@@ -12,6 +13,7 @@ const contenedorProducto = document.querySelector('.contenedor-productos')
 
 let todosProductos = [];
 let precioTotalProd = 0;
+let contadorProd = 0;
 
 //Script cerrar y abrir carrito
 document.addEventListener("DOMContentLoaded", function () {
@@ -59,6 +61,7 @@ contenedorProducto.addEventListener('click', e => {
             todosProductos = [...prod]
         } else {
             todosProductos = [...todosProductos, infoProductos]
+            contadorProd++;
         }
         mostrarHTML();
         // fin cambiar la cantidad de producto
@@ -84,8 +87,11 @@ contenedorCesta.addEventListener('click', (e) => {
         let resetTotal = document.querySelector('.precioTotal')
         resetTotal.textContent = precioTotalProd;
         //Fin Resetear el precio total cuando se elimina todos los productos
-
+        
+      
         todosProductos = todosProductos.filter(product => product.id !== idProducto);
+
+        contadorProd--;
     }
     mostrarHTML();
 });
@@ -115,6 +121,7 @@ const mostrarHTML = () => {
         contenedorCesta.append(cajaProductos);
         //Mostrar el total
         total.innerHTML = precioTotalProd;
+        aumentarCarrito.innerHTML = contadorProd;
     });
 }
 //Fin Cargar HTML
