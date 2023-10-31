@@ -71,14 +71,14 @@ form {
 }
 
 .info-tarjeta,
-input{
+input {
     width: 100%;
     padding: 8px;
     margin-top: 10px;
 }
 
 .info-tarjeta button {
-    width: 100%;
+    
     background-color: green;
     color: white;
     border: none;

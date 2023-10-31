@@ -1,7 +1,7 @@
 
 // Variables
-const contenedorCesta = document.querySelector('.add-product');
-const cestaDetalle = document.querySelector('.cestaDetalle');
+let contenedorCesta = document.querySelector('.add-product');
+let cestaDetalle = document.querySelector('.cestaDetalle');
 let botonEliminar = document.querySelector('.borrarProd');
 let total = document.querySelector('.precioTotal');
 let aumentarCarrito = document.querySelector('.contador-producto');
@@ -42,8 +42,8 @@ contenedorProducto.addEventListener('click', e => {
             cantidad: 1
         }
         // Precio total de producto
-        precioTotalProd  = parseFloat(precioTotalProd) + parseFloat(infoProductos.precio);
-        precioTotalProd  = precioTotalProd.toFixed(2)
+        precioTotalProd = parseFloat(precioTotalProd) + parseFloat(infoProductos.precio);
+        precioTotalProd = precioTotalProd.toFixed(2)
         //Fin Precio total de producto
 
         // Cambiar la cantidad de producto
@@ -72,9 +72,9 @@ contenedorProducto.addEventListener('click', e => {
 contenedorCesta.addEventListener('click', (e) => {
     if (e.target.classList.contains('fa-trash')) {
         const idProducto = e.target.getAttribute('btn-id')
-        
-       //Diminuar el precio total cuando se eliminar un producto
-        todosProductos.forEach(value =>{
+
+        //Diminuar el precio total cuando se eliminar un producto
+        todosProductos.forEach(value => {
             if (value.id == idProducto) {
                 let diminuarPrecio = parseFloat(value.precio) * parseFloat(value.cantidad);
                 precioTotalProd = precioTotalProd - diminuarPrecio;
@@ -87,8 +87,8 @@ contenedorCesta.addEventListener('click', (e) => {
         let resetTotal = document.querySelector('.precioTotal')
         resetTotal.textContent = precioTotalProd;
         //Fin Resetear el precio total cuando se elimina todos los productos
-        
-      
+
+
         todosProductos = todosProductos.filter(product => product.id !== idProducto);
 
         contadorProd--;
@@ -102,7 +102,7 @@ const mostrarHTML = () => {
     limpiarHTML();
 
     todosProductos.forEach(producto => {
-        const {img,titulo,precio,cantidad,id} = producto
+        const { img, titulo, precio, cantidad, id } = producto
         const cajaProductos = document.createElement('div')
         cajaProductos.classList.add('cestaDetalle')
 
@@ -131,6 +131,8 @@ function limpiarHTML() {
     contenedorCesta.innerHTML = ""
 }
 //Fin Funccion limpiar html
+
+
 
 
 
