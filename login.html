@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <a href="index.html">Volver inicio</a>
+  
     <div class="titulo">
         <h3 class="titulo-registro">Iniciar Sesión</h3>
         <form id="userLogin">
@@ -30,47 +30,11 @@
             <a href="registrar.html">Regístrate.</a>
         </form>
         <span id="mensaje"></span>
-        <p id="mostrarNombre" style="display: none"></p>
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <script>
-        // Codigo Iniciar Sesión **********************************
-        document.getElementById("userLogin").addEventListener("submit", function (e) {
-            e.preventDefault();
-            login();
-        });
-
-
-        function login() {
-
-            let nombreUsuario = document.getElementById("nombreUsuario").value;
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            let mostrarNombre = document.getElementById("mostrarNombre");
-          
-            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-            let usuario = usuarios.find(user => user.correo === email);
-
-            if (usuario && usuario.contrasena === password) {
-                
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Inicio de sesión exitoso!',
-                    text: 'Bienvenido'
-
-                });
-                window.location.href = "index.html";
-            } else {
-                document.getElementById("mensaje").textContent = "Correo o contraseña incorrectos.";
-
-            }
-        }
-        //Fin codigo iniciar Sesion ***********************************
-    </script>
-
+    <script src="registrar.js"></script>
 </body>
-
 </html>
