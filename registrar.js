@@ -20,8 +20,6 @@ userForm?.addEventListener("submit", function (e) {
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     if (nombre != "" || correo != "" || contrasena != "" || repitPass != "") {
 
-
-
         if (repitPass === contrasena) {
 
             let regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -44,7 +42,7 @@ userForm?.addEventListener("submit", function (e) {
                 document.getElementById("mensaje").textContent = "Por favor ingrese un email valido.";
             }
         } else {
-            document.getElementById("mensaje").textContent = "las contraseñas no coinciden.";
+            document.getElementById("mensaje").textContent = "Las contraseñas no coinciden.";
         }
     } else {
         document.getElementById("mensaje").textContent = "Por favor rellene todo los campos.";
@@ -80,7 +78,7 @@ function login() {
       
         window.location.href = "index.html";
     } else {
-        document.getElementById("mensaje").textContent = "Correo o contraseña incorrectos.";
+        document.getElementById("mensaje").textContent = "Correo o/y contraseña incorrectos.";
     }
 }
 // Fin codigo iniciar sesion  ***********************************
@@ -100,8 +98,8 @@ subscribeForm?.addEventListener("submit", function (e) {
         if (regexEmail.test(email)) {
             Swal.fire({
                 icon: 'success',
-                title: 'Registro correcto',
-                text: 'Gracias por subscribirse'
+                title: 'Gracias por subscribirse ',
+                text: 'Puede cancelar su suscripción en cualquier momento.'
             });
             document.getElementById("message").style = "display: none"
         } else {
@@ -112,10 +110,51 @@ subscribeForm?.addEventListener("submit", function (e) {
         document.getElementById("message").textContent = "Por favor el campo email es obligatorio.";
     }
     email = document.getElementById("email-subscribe").value = "";
-})
-
+});
 
 // Fin codigo formulario subscribe***********************************
+
+
+// codigo formulario buscador ***********************************
+const productos = [
+    {nombre: 'Audio',precio: 120},
+    {nombre: 'Smartphone',precio: 150},
+    {nombre: 'Electro-domesticos',precio: 90},
+    {nombre: 'Notebook nuevo',precio: 200},
+]
+
+let formularioBuscar = document.querySelector('#formularioBuscar')
+let botonFormulario = document.querySelector('#boton-formulario')
+let resultado = document.querySelector('#resultado')
+let buscadorProducto= document.querySelector('#buscadorProducto')
+
+
+buscadorProducto?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    buscarProducto();
+});
+
+function buscarProducto() {
+    resultado.innerHTML = '';
+
+    let texto = formularioBuscar.value;
+    for(let producto of productos){
+        let nombre = producto.nombre.toLowerCase();
+        if (nombre.indexOf(texto) !== -1) {
+            resultado.innerHTML += `
+             <li>${producto.nombre} - precio: ${producto.precio}</li>
+            `
+        }
+    }
+    if (resultado.innerHTML === '') {
+        resultado.innerHTML += `
+         <li>Producto no encontrado.</li>
+        ` 
+    } 
+}
+
+// fin codigo formulario buscador ***********************************
+
 
 
 

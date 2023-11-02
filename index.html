@@ -21,11 +21,24 @@
         <div class="contenedor">
 
             <div class="barra-contacto">
-                <div class="usuario">
-                    <a href="login.html"><i class="fa-regular fa-user"></i></a>
-
+                <div class="container-fluid">
+                    <form class="d-flex  active" role="search" id="buscadorProducto">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="formularioBuscar">
+                        <button class="btn btn-outline-success" type="submit" id="boton-formulario">Search</button>
+                    </form>
+                    <div class="cont-buscar">
+                        <div class="resultadoBuscador">
+                            <ul id="resultado" active> </ul>
+                        </div>
+                    </div>
                 </div>
 
+                
+
+                <div class="usuario">
+                    <a href="login.html"><i class="fa-regular fa-user"></i></a>
+                </div>
 
                 <div class="usuario-seach">
                     <i class="fa-solid fa-basket-shopping" id="icono-cesta"></i>
@@ -36,7 +49,9 @@
                 </div>
             </div>
 
+         
 
+            <!-- 
             <nav class="navbar navbar-expand-lg  custom-bg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">RECC</a>
@@ -56,13 +71,10 @@
                                     cliente</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
 
             <!--Info carrito-->
@@ -108,8 +120,17 @@
                     <a href="notbook.html">Notebook</a>
                     <a href="audio.html">Audio</a>
                     <a href="electo.html">Electro-domesticos</a>
+
                 </div>
+                <div class="info-contacto">
+                    <a href="contacto.html">Contacto</a>
+                    <a  href="https://api.whatsapp.com/send?phone=56974723711">Atención al
+                        cliente</a>
+                </div>
+                
             </div>
+            
+
         </div>
     </header>
 
@@ -130,12 +151,12 @@
             <div class="info-entrega">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <b>Entrega rapido</b><br>
-                <a href="">Buscar tu paquete.</a>
+                <p href="index.html">Buscar tu paquete.</a>
             </div>
             <div class="info-entrega">
                 <i class="fa-solid fa-headset"></i>
                 <b>Call center</b> <br>
-                <a href="">Asitencia online 24/7.</a>
+                <p href="index.html">Asitencia online 24/7.</a>
             </div>
         </div>
     </div>
@@ -274,8 +295,6 @@
 
 
 
-
-
         <div class="ofertas">
             <div class="imagen-ofertas-pub">
                 <a href="comprar.html"><button name="submit">Comprar</button></a>
@@ -285,7 +304,6 @@
             </div>
         </div>
     </section>
-
 
 
     <div class="imagen-subscribe">
@@ -306,13 +324,8 @@
                 <span id="message" style="color:red"></span>
             </form>
         </div>
-       
     </div>
     </div>
-
-
-
-
 
 
     <footer>

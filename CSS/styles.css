@@ -42,16 +42,12 @@ a {
     width: 100%;
     background: #00a896;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
+   
+    padding: 15px;
+    
 }
 
-.nav-contacto a {
-    color: white;
-    display: inline;
-    padding: 10px;
-}
+
 
 .user {
     color: white;
@@ -63,9 +59,10 @@ a {
     color: #9a8c98;
     border-radius: 80%;
 }
-.usuario{
+
+.usuario {
     margin-right: 10px;
-    
+
 }
 
 .fa-user {
@@ -82,7 +79,8 @@ i {
     text-align: center;
     cursor: pointer;
 }
-.contador-producto{
+
+.contador-producto {
     position: absolute;
     top: 35%;
     right: 15px;
@@ -96,10 +94,14 @@ i {
     border-radius: 50%;
     cursor: pointer;
 }
-.usuario-seach{
+
+.usuario-seach {
     position: relative;
 }
-
+.info-contacto a{
+    display: inline;
+    color: white;
+}
 /**FIN Barra principal del contacto**/
 
 /**Barra del logo**/
@@ -154,14 +156,18 @@ h2:hover {
 }
 
 .nav-bar {
-    width: 100%;
+   
     width: 100%;
     padding: .2rem;
+    display: flex;
+    justify-content: space-around;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
+.info-contacto a{
+    color: black;
+    justify-items: center;
+    padding: 10px;
+   
 }
 
 .nav a {
@@ -173,10 +179,10 @@ h2:hover {
 .nav a:hover {
     color: #2a9d8f;
     font-size: 20px;
-    
+
 }
 
-#selected  {
+#selected {
     color: #600352;
 }
 
@@ -204,7 +210,6 @@ h2:hover {
     right: -100%;
     z-index: 1;
     width: 350px;
-
     padding: 20px;
     background: white;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
@@ -213,7 +218,6 @@ h2:hover {
 
 .contenedorCesta.active {
     right: 0;
-
 }
 
 .titulo-cesta {
@@ -249,8 +253,6 @@ h2:hover {
     color: black;
     font-size: 1.2rem;
 }
-
-
 
 .total {
     display: flex;
@@ -307,6 +309,45 @@ h2:hover {
 }
 
 /*** Fin CSS info cesta **/
+
+/***CSS buscador producto **/
+.cont-buscar {
+    margin-top: 10px;
+}
+
+.cont-buscar {
+    position: fixed;
+    background: white;
+    /*** opacity: 0; **/
+    pointer-events: none;
+    overflow-y: auto;
+    width: 330px;
+    padding: 0;
+    box-shadow: -2px 0 4px 5px rgba(0, 0, 0, 0.10);
+}
+
+.cont-buscar ul {
+    list-style: none;
+    font-size: 16px;
+    /*** display: none;**/
+}
+
+.formularioBuscar.active .cont-buscar {
+    pointer-events: auto;
+    opacity: 1;
+    padding: 10px 5px;
+}
+
+.formularioBuscar.active .cont-buscar ul {
+    display: block;
+}
+
+/*** Fin CSS buscador producto **/
+
+
+
+
+
 
 
 
@@ -426,12 +467,13 @@ b {
     border-radius: 25px;
     color: white;
 }
-.contenedor-subscribe{
+
+.contenedor-subscribe {
     display: flex;
     justify-content: center;
 }
 
-.descuento, p {
+.descuento {
     color: white;
     font-size: 18px;
 }
@@ -440,16 +482,18 @@ b {
     font-size: 50px;
     color: white;
 }
-.subscribirse{
+
+.subscribirse {
     margin: 35px 20px;
 }
-.btn-subscribe{
+
+.btn-subscribe {
     display: flex;
 }
 
 
-.btn-subscribe input{
-    width:100%;
+.btn-subscribe input {
+    width: 100%;
     font-size: 16px;
     outline: none;
     border: none;
@@ -459,7 +503,7 @@ b {
 }
 
 .subscribirse button {
-    
+
     padding: .3rem;
     width: 40%;
     outline: none;
@@ -470,7 +514,7 @@ b {
     text-align: center;
     margin-top: 5px;
     margin-left: 20px;
-    
+
 }
 
 .btn-subscribe button:hover {
@@ -506,6 +550,7 @@ p {
     font-size: 16px;
     cursor: pointer;
 }
+
 .productos {
     display: flex;
     flex-direction: column;
@@ -520,13 +565,14 @@ p {
     border-radius: 30px;
 }
 
-.productos b{
+.productos b {
     margin: 10px 15px;
     font-size: 16px;
 }
 
 .productos p {
     margin-top: 10px;
+
 }
 
 .productos button:hover {
@@ -570,16 +616,20 @@ form {
     margin-top: 5px;
     font-size: 18px;
 }
+
 .registro,
-.login
- label{
+.login label {
     font-size: 18px;
 }
+
 .userLogin,
-.registro, p, a{
+.registro,
+p,
+a {
     font-size: 18px;
 
 }
+
 .login input {
     padding: 8px;
     width: 100%;
@@ -694,19 +744,4 @@ footer {
     height: 40px;
     background-color: rgb(189, 186, 186);
     font-size: 16px;
-}
-
-
-
-
-
-
-
-@media only screen and(min-width: 360) {
-    .barra-contacto {
-        display: flex;
-        flex-direction: column;
-        font-size: 14px;
-    }
-
 }
